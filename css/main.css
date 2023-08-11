@@ -58,6 +58,11 @@ button{
 #main_page article .link_box a:nth-child(2) {}
 #main_page article .link_box a:last-child {}
 
+#main_page video {
+  width: 100%;
+}
+
+
 /* Section.2 */
 /* color: #ff0 */
 
@@ -85,6 +90,7 @@ button{
   display: none;
 }
 #news .tab-menu {
+  position: relative;
   width: 1200px; height: 800px;
   margin: 100px auto;
 }
@@ -105,15 +111,17 @@ button{
   color: #fff;
 }
 #news .tab-box {
+  width: 1200px;
   display: none;
+  overflow: hidden;
 }
 #news .tab-box.active {
   display: block;
 }
 #news .menu_box {
+  position: relative;
   display: flex;
-  width: 1200px; height: 700px;
-  overflow: hidden;
+  width: 2050px; height: 700px;
 }
 #news .menu_con {
   position: relative;
@@ -162,6 +170,40 @@ button{
 #news .news_ani {
   /* display: none; */
 }
+#news .menu_btn_box {
+  position: absolute;
+  right:50px; top: 10px;
+  font-size: var(--f-size32);
+  font-weight: bold;
+  color: #333;
+}
+#news .menu_prev {
+  position: absolute;
+  left: -110px;
+}
+#news .menu_next {
+  position: absolute;
+  right: -40px;
+}
+#news .progress-container {
+  width: 100px;
+  background: #333;
+  height: 10px;
+  position: absolute;
+  top: 13px; right: -16px;
+  border-radius: 10px;
+}
+
+#news .progress-bar {
+  height: 100%;
+  width: 0;
+  background: #ffa000;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: width 0.5s;
+  border-radius: 10px;
+}
 
 /* Section.3 */
 /* color: #ff0 */
@@ -177,8 +219,8 @@ button{
 #movie .movie_box {
   display: flex;
   position: absolute;
-  left:0; top: 50%;
-  transform: translateY(-50%);
+  left:50%; top: 50%;
+  transform: translate(-50%, -50%);
 }
 #movie .movie_box .box_inner1 {
   width: 1200px; height: 675px;

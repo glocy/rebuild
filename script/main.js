@@ -1,24 +1,59 @@
 $(window).ready(function(){
 
   // 섹션.2 뉴스 탭메뉴
-  $(document).ready(function(){
-    // 탭 버튼을 클릭했을 때의 이벤트 핸들러
-    $('.tab-button').click(function(){
-      // 모든 탭 버튼의 활성화 상태를 제거
-      $('.tab-button').removeClass('active');
-
-      // 클릭한 탭 버튼에 활성화 상태를 추가
-      $(this).addClass('active');
-
-      // 클릭한 탭 버튼의 인덱스를 가져옴
-      let index = $(this).index();
-
-      // 모든 탭 박스의 활성화 상태를 제거
-      $('.tab-box').removeClass('active');
-
-      // 선택한 인덱스에 해당하는 탭 박스를 활성화
-      $('.tab-box').eq(index).addClass('active');
-    });
+  $('.tab-button').click(function(){
+    $('.tab-button').removeClass('active');
+    $(this).addClass('active');
+    let index = $(this).index();
+    $('.tab-box').removeClass('active');
+    $('.tab-box').eq(index).addClass('active');
   });
   
-})
+  //섹션.2 뉴스 탭메뉴 슬라이드
+  $('.menu_box > li:last-child').insertBefore('.menu_box > li:first-child');
+  $('.menu_box').css('margin-left','-410px');
+
+  let currentPageIndex = 1;
+  let totalPages = $('.menu_box > li').length;
+
+  function updateProgressBar() {
+    let progressPercentage = (currentPageIndex / totalPages) * 100;
+    $('.progress-bar').css('width', progressPercentage + '%');
+  }
+
+  function moveLeft() {
+      if (isAnimating) return;
+      isAnimating = true;
+      $('.menu_box > li:first-child').insertAfter('.menu_box > li:last-child');
+      $('.menu_box').css('margin-left', '0px');
+      $('.menu_box').animate({'margin-left': '-410px'}, 500, function() {
+          isAnimating = false;
+      });
+      currentPageIndex = (currentPageIndex % totalPages) + 1;
+      updateProgressBar();
+  }
+
+  function moveRight() {
+      if (isAnimating) return;
+      isAnimating = true;
+      $('.menu_box > li:last-child').insertBefore('.menu_box > li:first-child');
+      $('.menu_box').css('margin-left', '-820px');
+      $('.menu_box').animate({'margin-left': '-410px'}, 500, function() {
+          isAnimating = false;
+      });
+      currentPageIndex = (currentPageIndex - 1) || totalPages;
+      updateProgressBar();
+  }
+
+  let isAnimating = false;
+  $('.menu_prev').click(function() {
+      moveRight();
+  });
+
+  $('.menu_next').click(function() {
+      moveLeft();
+  });
+
+  updateProgressBar();
+});
+
