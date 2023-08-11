@@ -12,8 +12,12 @@
   --bg-color02:#212772;
   --bg-color03:#fff;
   --bg-color04:#E3022C;
-  --f-size:14px;
-  --f-size01:16px;
+  --f-size13:13px;
+  --f-size16:16px;
+  --f-size20:20px;
+  --f-size24:24px;
+  --f-size32:32px;
+  --f-size64:64px;
 }
 html {
   scroll-behavior: smooth;

@@ -8,7 +8,7 @@
     <link href="./css/base.css" type="text/css" rel="stylesheet">
     <link href="./css/layout.css" type="text/css" rel="stylesheet">
     <link href="./css/main.css" type="text/css" rel="stylesheet">
-    <link href="./css/swiper.css" type="text/css" rel="stylesheet">
+    <link href="./css/swiper-bundle.css" type="text/css" rel="stylesheet">
     <!-- Font-Awesome 6.0 -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <!-- 접두사 스크립트 -->
@@ -26,23 +26,23 @@
   <header>
     <h1>
       <a href="index.html" title="메인페이지로 바로가기">
-        <img src="" alt="상단로고">
+        <img src="./images/logo_gundaminfo-white.png" alt="상단로고">
       </a>
     </h1>
     <!-- 상단 내비게이션 -->
     <nav>
       <ul class="gnb">
-        <li><a href="#news" title="">NEWS</a></li>
-        <li><a href="#movie" title="">MOVIES</a></li>
-        <li><a href="#product" title="">PRODUCTS</a></li>
-        <li><a href="#about" title="">ABOUT GUNDAM</a></li>
-        <li><a href="#shop" title="">SHOP</a></li>
+        <li class="underline"><a href="#news" title="">NEWS</a></li>
+        <li class="underline"><a href="#movie" title="">MOVIES</a></li>
+        <li class="underline"><a href="#product" title="">PRODUCTS</a></li>
+        <li class="underline"><a href="#about" title="">ABOUT GUNDAM</a></li>
+        <li class="underline"><a href="#shop" title="">SHOP</a></li>
       </ul>
     </nav>
     <div class="header_right">
-      <i class="fa-solid fa-magnifying-glass"></i> <!-- 검색 아이콘 -->
-      <i class="fa-solid fa-user"></i> <!-- 로그인 아이콘 -->
-      <i class="fa-solid fa-bell"></i> <!-- 알람 아이콘-->
+      <a href="#" title=""><i class="fa-solid fa-magnifying-glass"></i></a> <!-- 검색 아이콘 -->
+      <a href="#" title=""><i class="fa-solid fa-user"></i></a> <!-- 로그인 아이콘 -->
+      <a href="#" title=""><i class="fa-solid fa-bell"></i></a> <!-- 알람 아이콘-->
     </div>
   </header>
   <!-- <nav id="m_nav">
@@ -60,73 +60,156 @@
       <article>
         <h3>영상제목</h3>
         <p>설명</p>
-        <a href="#" title="">'영상 제목' 더보기</a>
-        <a href="#" title="">다른 영상 보기</a>
-        <a href="#" title="">캘린더 보기</a>
+        <div class="link_box">
+          <a href="#" title="">'영상 제목' 더보기</a>
+          <a href="#" title="">다른 영상 보기</a>
+          <a href="#" title="">캘린더 보기</a>
+        </div>
       </article>
       <video autoplay muted loop='infinite'>
         <source src="http://glossy.dothome.co.kr/video/main_video01.webm" type="video/webm">
       </video>
-      <a href="#" title="" class=""></a>
+      <a href="#news" title="" class="scroll_down cloud"><i class="fa-solid fa-angles-down"></i></a>
     </section>
     <section id="news">
       <h2>NEWS</h2>
-      <ul>
-        <li><a href="#" title="">애니메이션 / 영상 / 음악</a>
-          <ul><!-- ul 이동 슬라이드 -->
-            <li>
-              <img src="" alt="이미지">
-              <dl>
-                <dt>제목</dt>
-                <dd>본문</dd>
-              </dl>
-              <p></p>
-            </li>
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
-          </ul>
-        </li>
-        <li><a href="#" title="">이벤트</a>
-          <ul>
-            <li>뉴스1</li>
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
-          </ul>
-        </li>
-        <li><a href="#" title="">건담베이스</a>
-          <ul>
-            <li>뉴스1</li>
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
-          </ul>
-        </li>
-      </ul>
+      <div class="tab-menu">
+        <div class="tabs">
+          <button class="tab-button active">애니메이션 / 영상 / 음악</button>
+          <button class="tab-button">이벤트</button>
+          <button class="tab-button">건담베이스</button>
+        </div>
+        <div class="tab-content">
+          <div class="tab-box active">
+            <div class="menu_box news_ani">
+              <div class="menu_con">
+                <img src="./images/news/ani/ani (1).jpg" alt="">
+                <div class="text_box">
+                  <a href="" title="">애니메이션 / 영상 / 음악</a>
+                  <p>극장판『기동전사 건담 SEED FREEDOM』의 제 2탄 PV & 캐릭터 설정화가 공개! 캐스트 코멘트도 도착!</p>
+                  <p>건프라 세상의 새로운 인터넷 서비스가 탄생했다. 메타버스 공간으로 유저들은 자신의 분신인 아바타를 움직여, 다른 유저들과의 교류와 건프라 배틀 등을 하며, 실제로 건프라를 구입 하는 것도 가능해졌다.
+                  </p>
+                  <p>날짜</p>
+                </div>
+              </div>
+              <div class="menu_con">
+                <img src="./images/news/ani/ani (2).jpg" alt="">
+                <div class="text_box">
+                  <a href="" title="">애니메이션 / 영상 / 음악</a>
+                  <p>제목</p>
+                  <p>내용</p>
+                  <p>날짜</p>
+                </div>
+              </div>
+              <div class="menu_con">
+                <img src="./images/news/ani/ani (3).jpg" alt="">
+                <div class="text_box">
+                  <a href="" title="">애니메이션 / 영상 / 음악</a>
+                  <p>제목</p>
+                  <p>내용</p>
+                  <p>날짜</p>
+                </div>
+              </div>
+              <div class="menu_con">
+                <img src="./images/news/ani/ani (4).jpg" alt="">
+                <div class="text_box">
+                  <a href="" title="">애니메이션 / 영상 / 음악</a>
+                  <p>제목</p>
+                  <p>내용</p>
+                  <p>날짜</p>
+                </div>
+              </div>
+              <div class="menu_con">
+                <img src="./images/news/ani/ani (5).jpg" alt="">
+                <div class="text_box">
+                  <a href="" title="">애니메이션 / 영상 / 음악</a>
+                  <p>제목</p>
+                  <p>내용</p>
+                  <p>날짜</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="tab-box">
+            <div class="menu_box news_event">
+
+            </div>
+          </div>
+          <div class="tab-box">
+            <div class="menu_box news_gunbase">
+
+            </div>
+          </div>
+        </div>
+      </div>
+    <div class="section_top"></div>
     </section>
     <section id="movie">
       <h2>MOVIES</h2>
       <div class="movie_box">
-        <div><!-- 왼쪽 영상, 오른쪽 영상 리스트 3개 정도 보이게 -->
-          <!-- iframe 영상 -->
+        <div class="box_inner1"><!-- 왼쪽 영상, 오른쪽 영상 리스트 3개 정도 보이게 -->
+          <iframe src="https://www.youtube.com/embed/5YGW2JRxWUU" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
         </div>
-        <ul>
-          <li></li>
-          <li></li>
-          <li></li>
-          <li></li>
-          <li></li>
-        </ul>
+        <div class="box_inner2">
+          <img src="./images/movies/movies_face.png" alt="">
+          <ul>
+            <li>
+              <div class="movie_con">
+                <img src="" alt="">
+                <div class="movie_text">
+                  <a href="" title="">MOVIE</a>
+                  <p>제목</p>
+                  <p>내용</p>
+                </div>
+              </div>
+            </li>
+            <li>
+              <div class="movie_con">
+                <img src="" alt="">
+                <div class="movie_text">
+                  <p></p>
+                  <p></p>
+                </div>
+              </div>
+            </li>
+            <li>
+              <div class="movie_con">
+                <img src="" alt="">
+                <div class="movie_text">
+                  <p></p>
+                  <p></p>
+                </div>
+              </div>
+            </li>
+            <li>
+              <div class="movie_con">
+                <img src="" alt="">
+                <div class="movie_text">
+                  <p></p>
+                  <p></p>
+                </div>
+              </div>
+            </li>
+          </ul>
+          <div class="movie_more">
+            <a href="#" title="">더보기</a>
+          </div>
+        </div>
       </div>
     </section>
-    <section id="#product">
-      <h2></h2>
+    <section id="product">
+      <h2>PRODUCT</h2>
+      <div class="section_bot"></div>
       <div class="product_box">
-        
+        <div class="product_gunpra">
+
+        </div>
+        <div class="product_figure">
+
+        </div>
+        <div class="product_etc">
+          
+        </div>
       </div>
     </section>
     <section id="about">
