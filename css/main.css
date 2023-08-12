@@ -74,7 +74,7 @@ button{
 }
 #news {
   position: relative;
-  width: 100%;
+  width: 100%; height: 1200px;
 }
 #news::after {
   position: absolute;
@@ -92,7 +92,7 @@ button{
 #news .tab-menu {
   position: relative;
   width: 1200px; height: 800px;
-  margin: 100px auto;
+  margin: 200px auto;
 }
 #news .tab-menu .tabs {
   display: flex;
@@ -173,7 +173,7 @@ button{
 #news .menu_btn_box {
   position: absolute;
   right:50px; top: 10px;
-  font-size: var(--f-size32);
+  font-size: var(--f-size24);
   font-weight: bold;
   color: #333;
 }
@@ -190,8 +190,8 @@ button{
   background: #333;
   height: 10px;
   position: absolute;
-  top: 13px; right: -16px;
-  border-radius: 10px;
+  top: 8px; right: -18px;
+  border-radius: 5px;
 }
 
 #news .progress-bar {
@@ -202,13 +202,14 @@ button{
   top: 0;
   left: 0;
   transition: width 0.5s;
-  border-radius: 10px;
+  border-radius: 5px;
 }
 
 /* Section.3 */
 /* color: #ff0 */
 
 #movie {
+  width: 100%; height: 1200px;
   position: relative;
   overflow: hidden;
   background: #000;
@@ -306,7 +307,7 @@ button{
 
 #product {
   position: relative;
-  width: 100%;
+  width: 100%; height: 1200px;
 }
 #product h2 {
   display: none;
@@ -318,8 +319,10 @@ button{
   background-image: linear-gradient(to bottom, rgba(0,0,0,1), rgba(0,0,0,0));
 }
 #product .product_box {
+  position: absolute;
   width: 1290px; height: 700px;
-  margin: 150px auto;
+  left:50%; top: 50%;
+  transform: translate(-50%, -50%);
   background: #ccc;
   display: flex;
   justify-content: space-between;

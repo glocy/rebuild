@@ -1,5 +1,16 @@
 $(window).ready(function(){
 
+  $('a[href^="#"]').on('click', function(event) {
+    var target = $($(this).attr('href'));
+
+    if (target.length) {
+        event.preventDefault();
+        $('html, body').animate({
+            scrollTop: target.offset().top + 100
+        }, 1000);
+    }
+  });
+
   // 섹션.2 뉴스 탭메뉴
   $('.tab-button').click(function(){
     $('.tab-button').removeClass('active');
