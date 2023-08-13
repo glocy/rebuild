@@ -18,6 +18,7 @@
   --f-size24:24px;
   --f-size32:32px;
   --f-size64:64px;
+  --f-size96:96px;
 }
 html {
   scroll-behavior: smooth;
