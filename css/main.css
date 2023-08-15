@@ -651,24 +651,78 @@ button{
 
 #shop {
   position: relative;
-  width: 100%;
-}
-
-#shop .shop_box {
-  
+  width: 100%; height: 1200px;
 }
 #shop .shop_box .bandaimall {
-  width: 1080px; height: 643px;
+  width: 880px; height: 643px;
   position: absolute;
-  left: 0; top: 0;
+  left: -120px; top: 150px;
   clip-path: polygon(85% 0, 100% 50%, 85% 100%, 0% 100%, 15% 50%, 0% 0%);
 }
-#shop .shop_box .gundambase {
-  width: 1080px; height: 643px;
+#shop .shop_box .bandaimall_text {
+  width: 1000px; height: 100px;
   position: absolute;
-  right: 0; bottom: 0;
+  left: -600px; top: 230px;
+  clip-path: polygon(5% 0, 100% 0, 95% 100%, 0 100%);
+  background: #ffa000;
+  text-align: center;
+}
+#shop .shop_box .bandaimall_text a {
+  color: #fff;
+  font-size: var(--f-size64);
+  line-height: 90px;
+}
+#shop .shop_box .gundambase {
+  width: 880px; height: 643px;
+  position: absolute;
+  right: -120px; bottom: 150px;
   clip-path: polygon(100% 0%, 85% 50%, 100% 100%, 15% 100%, 0% 50%, 15% 0);
 }
+#shop .shop_box .gundambase_text {
+  width: 700px; height: 100px;
+  position: absolute;
+  right: -600px; bottom: 230px;
+  clip-path: polygon(0 0, 95% 0, 100% 100%, 5% 100%);
+  background: #bb0001;
+  text-align: center;
+}
+#shop .shop_box .gundambase_text a {
+  color: #fff;
+  font-size: var(--f-size64);
+  line-height: 90px;
+}
+
+#shop .shop_box .bandaimall, 
+#shop .shop_box .bandaimall_text,
+#shop .shop_box .gundambase, 
+#shop .shop_box .gundambase_text {
+  opacity: 0;
+}
+
+/* banner top */
+#banner-product h2 {display: none;}
+#banner-product .slider-container {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  height: 200px;
+}
+
+#banner-product .slider {
+  position: relative;
+  display: flex;
+  transition: all 0.5s;
+}
+
+#banner-product .slide {
+  position: relative;
+  width: 148px;
+  height: 200px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 
 /* Section.7 Footer */
 /* color: #f0f*/

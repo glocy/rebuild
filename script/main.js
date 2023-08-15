@@ -257,5 +257,47 @@ $(window).scroll(function() {
     }
   });
 
+
+  // shop animation
+
+  let animated = false;
+
+  $(window).scroll(function(){
+    let shopTop = $('#shop').offset().top;
+    let windowHeight = $(window).height();
+    let scrollPosition = $(window).scrollTop();
+
+    if (scrollPosition + windowHeight > shopTop && !animated) {
+      animated = true;
+
+      $('.bandaimall').animate({
+          left: '120px',
+          opacity: 1
+      }, 1000);
+
+      $('.bandaimall_text').delay(300).animate({
+          left: '600px',
+          opacity: 1
+      }, 1000);
+
+      $('.gundambase').delay(600).animate({
+          right: '120px',
+          opacity: 1
+      }, 1000);
+
+      $('.gundambase_text').delay(900).animate({
+          right: '600px',
+          opacity: 1
+      }, 1000);
+    }
+  });
+  // ad product banner
+
+
+
+  // ad random banner
+  
+  let randomNumber = Math.floor(Math.random() * 3) + 1;
+  $('.ad-inner').addClass('bg0' + randomNumber);
 });
 
