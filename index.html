@@ -25,7 +25,7 @@
 <body>
   <header>
     <h1>
-      <a href="index.html" title="메인페이지로 바로가기">
+      <a href="#main_page" title="메인페이지로 바로가기">
         <img src="./images/logo_gundaminfo-white.png" alt="상단로고">
       </a>
     </h1>
@@ -45,16 +45,10 @@
       <a href="#" title=""><i class="fa-solid fa-bell"></i></a>
     </div>
   </header>
-  <!-- <nav id="m_nav">
-    <ul>
-      <li><span>1</span><a href="#" title="소개">소개</a></li>
-      <li><span>2</span><a href="#" title="체험">체험</a></li>
-      <li><span>3</span><a href="#" title="이벤트">이벤트</a></li>
-      <li><span>4</span><a href="#" title="구매">구매</a></li>
-      <li><span>5</span><a href="#" title="고객지원">고객지원</a></li>
-    </ul>
-  </nav> -->
   <main>
+    <button id="top">
+      <i class="fa-solid fa-arrow-up"></i>
+    </button>
     <section id="main_page">
       <h2>메인화면</h2>
       <article>
@@ -73,7 +67,11 @@
     </section>
     <section id="news">
       <h2>NEWS</h2>
-      <div></div>
+      <aside class="side_banner">
+        <a href="" title="">
+          <img src="./images/side/side1.jpg" alt="">
+        </a>
+      </aside>
       <div class="tab-menu">
         <div class="menu_btn_box">
           <div class="menu_prev"><i class="fa-solid fa-angle-left"></i></div> 
@@ -426,8 +424,8 @@
               </a>
             </div>
           </div>
-          <div>
-            <a href="" title="" class="about_more">건담 시리즈 더보기</a>
+          <div class="about_more">
+            <a href="" title="">건담 시리즈 더보기</a>
           </div>
         </div>
       </div>
@@ -471,11 +469,12 @@
         </div>
       </div>
     </section>
-    <section id="banner">
-      <div class="banner-top">
-        <a href="#" title="제휴" class="ad-inner"></a>
+    <article id="banner">
+      <h2>ads banner</h2>
+      <div class="banner_top">
+        <a href="#" title="제휴" class="banner_inner"><img id="ad_banner" alt=""></a>
       </div>
-    </section>
+    </article>
   </main>
   <footer>
     <div class="footer_wrap">

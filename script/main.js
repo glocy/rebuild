@@ -1,15 +1,17 @@
 $(window).ready(function(){
 
-  // $('a[href^="#"]').on('click', function(event) {
-  //   let target = $($(this).attr('href'));
+  $(window).scroll(function() {
+    if ($(this).scrollTop() > 900) {
+      $('#top').fadeIn();
+    } else {
+      $('#top').fadeOut();
+    }
+});
 
-  //   if (target.length) {
-  //       event.preventDefault();
-  //       $('html, body').animate({
-  //           scrollTop: target.offset().top + 100
-  //       }, 1000);
-  //   }
-  // });
+$('#top').click(function() {
+    $('html, body').animate({scrollTop: 0}, 400);
+    return false;
+});
 
   function updateTotalPagesAndProgress() {
     // 현재 활성화된 탭의 li 갯수 업데이트
@@ -293,11 +295,45 @@ $(window).scroll(function() {
   });
   // ad product banner
 
+  let mLeft = -148;
 
+    function moveLeft() {
+      $('.slider').css('margin-left', mLeft);
+      mLeft -= 1; 
+
+      if(mLeft==-148) {
+        $('.slider-container ul li:first-child').insertAfter('.slider-container ul li:last-child');
+      } else if (mLeft==-296) {
+        mLeft=-147;
+      };
+    };
+
+    let banner = $('.slider');
+
+    banner.hover(function(){
+      clearInterval(Timer)
+    }, function() {
+      Timer = setInterval(moveLeft, 25);
+    })
+    
+    let Timer = setInterval(moveLeft, 25);
 
   // ad random banner
   
-  let randomNumber = Math.floor(Math.random() * 3) + 1;
-  $('.ad-inner').addClass('bg0' + randomNumber);
+  let images = [
+    "./images/banner/banner1.jpg",
+    "./images/banner/banner2.jpg",
+    "./images/banner/banner3.jpg",
+    "./images/banner/banner4.jpg"
+  ];
+
+  function randomBanner() {
+    let random = images[Math.floor(Math.random() * images.length)];
+    $('#ad_banner').attr('src', random);
+}
+
+randomBanner();
+
+setInterval(randomBanner, 6000);
 });
 

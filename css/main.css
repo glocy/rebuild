@@ -10,6 +10,28 @@ button{
   background: inherit ; border:none; box-shadow:none; border-radius:0; padding:0; overflow:visible; cursor:pointer;
 }
 
+#top {
+  display: none;
+  position: fixed;
+  bottom: 40px;
+  right: 40px;
+  width: 50px;
+  height: 50px;
+  background-color: #ffa000;
+  color: white;
+  border: none;
+  cursor: pointer;
+  z-index: 9999;
+  transition: 0.3s;
+}
+
+#top:hover {
+  background-color: #bb0001;
+}
+#top i {
+  font-size: var(--f-size32);
+}
+
 /* section.1 */
 /* color: #f0f*/
 
@@ -213,6 +235,12 @@ button{
   border-radius: 5px;
 }
 
+#news .side_banner {
+  position: absolute;
+  right:5%; top: 50%;
+  transform: translateY(-50%);
+}
+
 /* Section.3 */
 /* color: #f0f*/
 
@@ -234,17 +262,17 @@ button{
 #movie .movie_box .box_inner1 {
   width: 1200px; height: 675px;
   border: 10px solid #ffa000;
-  box-shadow: 0 0 0 10px #ffa000 inset;
-  border-radius: 20px;
+  /* box-shadow: 0 0 0 10px #ffa000 inset; */
+  /* border-radius: 20px; */
 }
 #movie .movie_box .box_inner1 iframe {
   width: 1200px; height: 675px;
-  border-radius: 20px;
+  /* border-radius: 20px; */
 }
 #movie .movie_box .box_inner2 {
   position: relative;
   width: 610px; height: 695px;
-  border-radius: 20px;
+  /* border-radius: 20px; */
   background-color: #f0f0f0;
   margin-left: 20px;
 }
@@ -646,12 +674,27 @@ button{
   font-family: Cardo;
 }
 
+#about .about_more {
+  position: absolute;
+  left: 50%; bottom: 100px;
+  width: 150px; height: 40px;
+  border: 1px solid #fff;
+  text-align: center;
+}
+#about .about_more a {
+  display: block;
+  font-size: var(--f-size16);
+  color: #fff;
+  line-height: 40px;
+}
+
 /* Section.6 Shop */
 /* color: #f0f*/
 
 #shop {
   position: relative;
   width: 100%; height: 1200px;
+  background: #f0f0f0;
 }
 #shop .shop_box .bandaimall {
   width: 880px; height: 643px;
@@ -711,7 +754,8 @@ button{
 #banner-product .slider {
   position: relative;
   display: flex;
-  transition: all 0.5s;
+  margin-left: -148px;
+  /* transition: all 0.5s; */
 }
 
 #banner-product .slide {
@@ -719,10 +763,22 @@ button{
   width: 148px;
   height: 200px;
   display: flex;
-  align-items: center;
-  justify-content: center;
+  /* align-items: center;
+  justify-content: center; */
 }
 
+/* ads banner */
+
+#banner {
+  position: relative;
+  padding-bottom: 80px;
+  background: #f0f0f0;
+}
+#banner h2 {display: none;}
+#banner .banner_top {
+  width: 1200px; height: 160px;
+  margin: 0 auto;
+}
 
 /* Section.7 Footer */
 /* color: #f0f*/
